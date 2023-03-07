@@ -35,3 +35,16 @@
 
 # MAGIC %sql
 # MAGIC select * from resq_testdemo.squirrel_activities;
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC --  create a view for squirrel activities whose squirrels count is more than 5
+# MAGIC 
+# MAGIC create or replace view resq_testdemo.v_squirrels_activities
+# MAGIC as
+# MAGIC select * from resq_testdemo.squirrel_activities
+# MAGIC where sq_activity_count > 5
+
+# COMMAND ----------
+
